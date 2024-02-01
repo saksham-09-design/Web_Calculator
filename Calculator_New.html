@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Calculator</title>
+<style>
+	#calculator{width: 300px; height:280px; background-color: greenyellow;}
+	input{width: 20%; height: 40px; font-size: 20px; margin: 6px;}
+	#screen{width: 96%; height: 50px; background-color: silver;}
+</style>
+</head>
+<body>
+<div id ="calculator">
+<form name = "first">
+<input type = "text" name = box placeholder = "0" id = "screen"> <br>
+<input type = "button" value = "1" onclick = "first.box.value += 1">
+<input type = "button" value = "2" onclick = "first.box.value += 2">
+<input type = "button" value = "3" onclick = "first.box.value += 3">
+<input type = "button" value = "+" onclick = "sum()">
+
+<br>
+<input type = "button" value = "4" onclick = "first.box.value += 4">
+<input type = "button" value = "5" onclick = "first.box.value += 5">
+<input type = "button" value = "6" onclick = "first.box.value += 6">
+<input type = "button" value = "-" onclick = "sub()">
+
+<br>
+<input type = "button" value = "7" onclick = "first.box.value += 7">
+<input type = "button" value = "8" onclick = "first.box.value += 8">
+<input type = "button" value = "9" onclick = "first.box.value += 9">
+<input type = "button" value = "/" onclick = "division()">
+
+<br>
+<input type = "button" value = "C" onclick = "first.box.value = ''">
+<input type = "button" value = "0" onclick = "first.box.value += 0">
+<input type = "button" value = "=" onclick = "first.box.value = eval(first.box.value)">
+<input type = "button" value = "X" onclick = "mul()">
+</form>
+<script language = "javascript">
+function sum()
+	{
+		var a=0 ,b=0;
+		a = first.box.value;
+		b = a.charAt(a.length-1);
+		if(b == '+' || b == '-' || b == '/' || b == '*')
+		{
+			first.box.value = a.substring(0,a.length-1);
+			first.box.value +='+';
+		}
+		else
+		{
+			first.box.value +='+';
+		}
+	}
+	
+function sum()
+	{
+		var a=0 ,b=0;
+		a = first.box.value;
+		b = a.charAt(a.length-1);
+		if(b == '+' || b == '-' || b == '/' || b == '*')
+		{
+			first.box.value = a.substring(0,a.length-1);
+			first.box.value +='+';
+		}
+		else
+		{
+			first.box.value +='+';
+		}
+	}
+
+function sub()
+	{
+		var a=0 ,b=0;
+		a = first.box.value;
+		b = a.charAt(a.length-1);
+		if(b == '+' || b == '-' || b == '/' || b == '*')
+		{
+			first.box.value = a.substring(0,a.length-1);
+			first.box.value +='-';
+		}
+		else
+		{
+			first.box.value +='-';
+		}
+	}
+
+function division()
+	{
+		var a=0 ,b=0;
+		a = first.box.value;
+		b = a.charAt(a.length-1);
+		if(b == '+' || b == '-' || b == '/' || b == '*')
+		{
+			first.box.value = a.substring(0,a.length-1);
+			first.box.value +='/';
+		}
+		else
+		{
+			first.box.value +='/';
+		}
+	}
+
+function mul()
+	{
+		var a=0 ,b=0;
+		a = first.box.value;
+		b = a.charAt(a.length-1);
+		if(b == '+' || b == '-' || b == '/' || b == '*')
+		{
+			first.box.value = a.substring(0,a.length-1);
+			first.box.value +='*';
+		}
+		else
+		{
+			first.box.value +='*';
+		}
+	}	
+</script>
+</div>
+</body>
+</html>
